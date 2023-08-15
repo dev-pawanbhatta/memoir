@@ -1,0 +1,17 @@
+.side-item .side-link {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0.6rem;
+    transition: 1s;
+    border-radius: 6px;
+    margin-bottom: 0.6rem;
+}
+
+.side-item .side-link:hover {
+    background-color: grey;
+}
+
+.side-item .side-link.active {
+    background-color: gray;
+}
