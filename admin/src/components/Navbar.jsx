@@ -78,6 +78,9 @@ export default function Navbar() {
                         <div className="side-item">
                             <Link to='/' className={(url == '/' ? 'side-link active' : 'side-link')}>Dashboard</Link>
                         </div>
+                        <div className="side-item">
+                            <Link to='/categories' className={(url == '/categories' ? 'side-link active' : 'side-link')}>Categories</Link>
+                        </div>
                     </div>
                 </div>
             </div>
