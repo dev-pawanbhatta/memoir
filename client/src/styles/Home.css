@@ -1,7 +1,7 @@
 .hero-section {
     background-image: linear-gradient(45deg, orange, red, purple);
     height: 50vh;
-    padding: 10% 20px;
+    padding: 8% 20px;
     text-align: center;
 }
 
@@ -14,4 +14,8 @@
 .hero-section div {
     color: white;
     font-size: 20px;
+}
+
+.search-box::placeholder {
+    color: white !important;
 }
