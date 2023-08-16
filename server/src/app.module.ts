@@ -5,16 +5,21 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { CategorySchema } from './schema/category.schema';
 import { CategoryService } from './service/category.service';
 import { CategoryController } from './controller/category.controller';
+import { BlogSchema } from './schema/blog.schema';
+import { BlogController } from './controller/blog.controller';
+import { BlogService } from './service/blog.service';
+require('dotenv').config();
 
 @Module({
   imports: [
-    MongooseModule.forRoot("mongodb+srv://pawanbhatta:L0XAktvyVuscLF0S@cluster0.pytz0gw.mongodb.net/?retryWrites=true&w=majority", { dbName: "memoir" }), MongooseModule.forFeature(
+    MongooseModule.forRoot(process.env.DATABASE_URL, { dbName: "memoir" }), MongooseModule.forFeature(
       [
-        { name: 'Category', schema: CategorySchema }
+        { name: 'Category', schema: CategorySchema },
+        { name: 'Blog', schema: BlogSchema }
       ]
     )
   ],
-  controllers: [AppController, CategoryController],
-  providers: [AppService, CategoryService],
+  controllers: [AppController, CategoryController, BlogController],
+  providers: [AppService, CategoryService, BlogService],
 })
 export class AppModule { }

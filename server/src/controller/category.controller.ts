@@ -175,6 +175,11 @@ export class CategoryController {
                     data: [deleted]
                 })
             }
+            else {
+                return res.status(400).json({
+                    message: 'Category not deleted',
+                })
+            }
         } catch (err) {
             console.log(err);
             return res.status(400).json({
